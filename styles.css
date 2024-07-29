@@ -1,0 +1,192 @@
+/* Reseta alguns estilos para consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #212529;
+    padding-top: 60px; /* Para compensar a navbar fixa */
+    background-image: url('imagens/antigas.jpg'); /* Adicione o caminho da sua imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra o corpo inteiro */
+    background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa durante o scroll */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+/* Fixar o menu no topo ao rolar a página */
+.navbar {
+    background-color: rgba(0, 121, 107, 0.9); /* Cor inicial do menu com opacidade */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 77, 64, 0.9); /* Cor do menu ao rolar a página com opacidade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o menu lateral (offcanvas) */
+.offcanvas {
+    width: 250px;
+}
+
+.offcanvas-header {
+    background-color: #004d40;
+    color: #fff;
+}
+
+.offcanvas-body {
+    padding: 1rem;
+}
+
+/* Estilos para os links de navegação */
+.nav-link {
+    color: #880707;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #05463f;
+}
+
+/* Estilos para o botão de menu mobile */
+.navbar-toggler {
+    border: none;
+    background-color: #212529;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Melhorias de usabilidade e experiência do usuário */
+.navbar-brand, .nav-link {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
+
+/* objetivo*/
+
+#objetivo {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+#objetivo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00796b;
+}
+
+#objetivo p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #212529;
+}
+
+
+/* Cores de fundo e texto para a área logada */
+.container {
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 2rem;
+    max-width: 100%; /* Garante que a largura não exceda a tela */
+}
+
+/* Estilos adicionais para botões */
+.btn-primary {
+    background-color: #00796b;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+}
+
+/* Estilo para os formulários */
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilos para o carrossel */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Estilos para garantir que o slider fique abaixo do menu fixo */
+.carousel-container {
+    margin-top: 60px; /* Compensar a altura da navbar fixa */
+    position: relative;
+    z-index: 1;
+}
+
+.scrolled .carousel-container {
+    margin-top: 0; /* Remove a margem ao rolar para manter o slider no lugar */
+}
+
+/* Estilo para a seção Missão, Visão e Valores */
+#mission-vision-values {
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#mission-vision-values .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #00796b;
+}
+
+#mission-vision-values h3 {
+    font-size: 1.8rem;
+    color: #004d40;
+    margin-bottom: 1rem;
+}
+
+#mission-vision-values p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+#mission-vision-values ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#mission-vision-values ul li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#mission-vision-values ul li strong {
+    color: #00796b;
+}
